@@ -293,7 +293,7 @@ h2.title.is-3 span.motion-type {
 /* Character grid complex layout - matching webpage_for_preview */
 .character-grid-complex {
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 3.3fr 1fr;
   gap: 25px;
   align-items: start;
 }
@@ -316,6 +316,13 @@ h2.title.is-3 span.motion-type {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
+}
+
+.vertical-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
   height: 100%;
 }
 
@@ -377,6 +384,49 @@ h2.title.is-3 span.motion-type {
   border-radius: 8px;
 }
 
+/* New grid layout for 3 landscape and 2 portrait videos */
+.character-grid-3-2 {
+  display: grid;
+  grid-template-columns: 4fr 0.95fr;
+  gap: 20px;
+  width: 100%;
+  /* Ensure the grid has a constrained height or aspect ratio if needed, 
+     but usually letting content dictate height is fine. 
+     However, to align the bottoms, we rely on the aspect ratios. */
+}
+
+.column-landscape {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column-portrait {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.character-grid-3-2 .character-video {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.character-grid-3-2 .video-container {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  background: #000;
+}
+
+.character-grid-3-2 .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Use contain to show full video */
+}
+
 @media (max-width: 768px) {
   .character-grid-complex {
     grid-template-columns: 1fr;
@@ -393,6 +443,11 @@ h2.title.is-3 span.motion-type {
     gap: 12px;
   }
 
+  .vertical-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   .character-video {
     padding: 12px;
   }
@@ -400,6 +455,16 @@ h2.title.is-3 span.motion-type {
   .special-characters-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .character-grid-3-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .column-landscape, .column-portrait {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 
@@ -415,6 +480,11 @@ h2.title.is-3 span.motion-type {
   }
 
   .vertical-videos-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vertical-row {
     grid-template-columns: 1fr;
     gap: 10px;
   }

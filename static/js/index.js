@@ -109,4 +109,49 @@ $(document).ready(function() {
     // Call the alignment function
     alignVideoLabels();
 
+    // Video Lazy Loading with Intersection Observer
+    function lazyLoadVideos() {
+        // Select all videos with preload="none"
+        const lazyVideos = document.querySelectorAll('video[preload="none"]');
+        
+        if ('IntersectionObserver' in window) {
+            const videoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        
+                        // Load the video when it enters the viewport
+                        if (video.readyState === 0) {
+                            video.load();
+                            console.log('Lazy loading video:', video.id);
+                        }
+                        
+                        // Stop observing this video
+                        observer.unobserve(video);
+                    }
+                });
+            }, {
+                // Start loading when video is 200px away from viewport
+                rootMargin: '200px 0px',
+                threshold: 0.01
+            });
+            
+            // Observe all lazy videos
+            lazyVideos.forEach(video => {
+                videoObserver.observe(video);
+            });
+            
+            console.log(`Lazy loading enabled for ${lazyVideos.length} videos`);
+        } else {
+            // Fallback for browsers that don't support IntersectionObserver
+            lazyVideos.forEach(video => {
+                video.load();
+            });
+            console.log('IntersectionObserver not supported, loading all videos');
+        }
+    }
+    
+    // Initialize lazy loading
+    lazyLoadVideos();
+
 })
