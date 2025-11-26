@@ -75,4 +75,38 @@ $(document).ready(function() {
 
     bulmaSlider.attach();
 
+    // Function to align video labels with video width
+    function alignVideoLabels() {
+        const video = document.getElementById('teaser1');
+        const labels = document.querySelector('.video-labels');
+        
+        if (video && labels) {
+            function updateAlignment() {
+                // Get the actual rendered size of the video
+                const videoWidth = video.offsetWidth;
+                
+                // Set the labels container to match video width
+                labels.style.width = videoWidth + 'px';
+                
+                console.log('Video width:', videoWidth, 'Labels width set to:', labels.style.width);
+            }
+            
+            // Multiple event listeners to catch all scenarios
+            video.addEventListener('loadedmetadata', updateAlignment);
+            video.addEventListener('loadeddata', updateAlignment);
+            video.addEventListener('canplay', updateAlignment);
+            window.addEventListener('resize', updateAlignment);
+            window.addEventListener('load', updateAlignment);
+            
+            // Also try immediately and with delays
+            updateAlignment();
+            setTimeout(updateAlignment, 100);
+            setTimeout(updateAlignment, 500);
+            setTimeout(updateAlignment, 1000);
+        }
+    }
+    
+    // Call the alignment function
+    alignVideoLabels();
+
 })

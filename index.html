@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>SCAIL: Towards Studio-Grade Character Animation via In-Context Learning of 3D-Consistent Pose Representations</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -22,7 +22,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css?family=Archivo:400,500,600,700,800|Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -42,78 +42,45 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title"><img src="./static/images/scail.png" alt="SCAIL" style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;">: Towards Studio-Grade Character Animation via In-Context Learning of 3D-Consistent Pose Representations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://github.com/teal024">Wenhao Yan</a><sup>1*†</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=AyDP3-wAAAAJ">Sheng Ye</a><sup>1*†</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
+              <a href="https://scholar.google.com/citations?user=tgAt-gEAAAAJ">Zhuoyi Yang</a><sup>1,2‡</sup>,</span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
+              <a href="https://scholar.google.com/citations?user=68PC4LMAAAAJ">Jiayan Teng</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
+              <span class="author-name">ZhenHui Dong</span><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
+              <span class="author-name">Kairui Wen</span><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://scholar.google.com/citations?user=YR4Lp0QAAAAJ">Xiaotao Gu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm">Yong-Jin Liu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://keg.cs.tsinghua.edu.cn/jietang/">Jie Tang</a><sup>1§</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Z.ai</span>
+          </div>
+          
+          <div class="is-size-6 publication-authors" style="margin-top: 10px;">
+            <span class="author-block"><sup>*</sup>Equal contribution.</span>
+            <span class="author-block"><sup>†</sup>Work done during internship at Z.ai.</span>
+            <span class="author-block"><sup>‡</sup>Project leader.</span>
+            <span class="author-block"><sup>§</sup>Corresponding author.</span>
           </div>
 
           <div class="column has-text-centered">
@@ -139,12 +106,12 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=FyxR_slEhfA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Demo</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -157,15 +124,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -178,79 +136,20 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+      <video id="teaser1" autoplay muted loop playsinline height="100%" style="margin-bottom: 1rem;">
+        <source src="./static/videos/glued_teaser.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf" style="font-weight: 800;">SCAIL</span>
+        enables high-fidelity character animation under diverse and challenging conditions.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
+<section class="section" style="background-color: #f5f5f5;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -258,48 +157,72 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Achieving character animation that meets the studio-grade production standards remains challenging despite recent progress. Existing approaches can transfer motion from a driving video to a reference image, but often fail to preserve structural fidelity and temporal consistency in wild scenarios involving complex motion and cross-identity animations.
+            In this work, we present <strong>SCAIL</strong> (<strong>S</strong>tudio-grade <strong>C</strong>haracter <strong>A</strong>nimation via <strong>I</strong>n-context <strong>L</strong>earning), a framework designed to address these challenges from two key innovations. First, we propose a novel 3D pose representation, providing a robust and flexible motion signal. Second, we introduce a full-context pose injection mechanism within a diffusion-transformer architecture, enabling effective spatio-temporal reasoning over full motion sequences.
+            To align with studio-level requirements, we develop a curated data pipeline ensuring both diversity and quality, and establish a comprehensive benchmark for systematic evaluation. Experiments show that <strong>SCAIL</strong> achieves state-of-the-art performance and advances character animation toward studio-grade reliability and realism.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        
+        <div class="method-images">
+          <div class="method-row top-row">
+            <div class="method-image-container small">
+              <img src="./static/images/pose.png" alt="3D-Consistent Pose Representation" class="method-image">
+              <h3>3D-Consistent Pose Representation</h3>
+            </div>
+            <div class="method-image-container extrasmall">
+              <img src="./static/images/explore.png" alt="Exploration of Different Injection Methods" class="method-image">
+              <p style="font-weight: 600;"><i>Exploration of Different Injection Methods</i></p>
+            </div>
+          </div>
+          
+          <div class="method-row bottom-row">
+            <div class="method-image-container large">
+              <img src="./static/images/network.png" alt="Full-Context Pose Injection with P-RoPE within DiT Architecture" class="method-image">
+              <h3>Full-Context Pose Injection with P-RoPE within DiT Architecture</h3>
+            </div>
+          </div>
         </div>
+        
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            <strong>SCAIL</strong> builds upon Wan-I2V models and incorporates <strong>3D-Consistent</strong> pose representation to learn precise identity-agnostic motion. After comparing different injection methods, we adopt <strong>full-context pose injection</strong> for the model to learn spatial-temporal motion characteristics. 
+            We leverage <strong>Pose-shifted RoPE</strong> to facilitate learning of spatial-temporal relation between video tokens and pose tokens.
+          </p>
+        </div>
+
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <!-- Demo video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo Video</h2>
+        <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/FyxR_slEhfA"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+    </div>
+    <!--/ Demo video. -->
   </div>
 </section>
 
@@ -307,135 +230,192 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    <!-- Self-Driven Complex Motion -->
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Self-Driven Complex Motion</h2>
+        <div class="columns is-vcentered">
+          <div class="column is-6">
+            <video id="self-ballet" controls muted loop playsinline height="100%">
+              <source src="./static/videos/1_selfcomplex.mp4" type="video/mp4">
             </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Ballet</p>
           </div>
-
+          <div class="column is-6">
+            <video id="self-straddle" controls muted loop playsinline height="100%">
+              <source src="./static/videos/2_selfcomplex.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Straddle</p>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+  </div>
+</section>
 
-    <!-- Animation. -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">    
+    <!-- Cross-Driven Complex Motion -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
+        <h2 class="title is-3">Cross-Driven Complex Motion<br><span class="motion-type">(Human -> Human)</span></h2>
+        
+        <!-- First row of cross-driven videos -->
+        <div class="columns is-vcentered" style="margin-bottom: 2rem;">
+          <div class="column is-6">
+            <video id="cross-acrobat" controls muted loop playsinline height="100%">
+              <source src="./static/videos/3_crossacrobat.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Acrobats</p>
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+          <div class="column is-6">
+            <video id="cross-kungfu" controls muted loop playsinline height="100%">
+              <source src="./static/videos/4_crosskungfu.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Expressive Body Movements</p>
+          </div>
+        </div>
+        
+        <!-- Second row of cross-driven videos -->
+        <div class="columns is-vcentered" style="margin-bottom: 2rem;">
+          <div class="column is-6">
+            <video id="cross-yoga" controls muted loop playsinline height="100%">
+              <source src="./static/videos/5_crossyoga.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Occluded Postures</p>
+          </div>
+          <div class="column is-6">
+            <video id="cross-fight" controls muted loop playsinline height="100%">
+              <source src="./static/videos/7_crossfight.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Fighting Scenes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Cross-Driven Complex Motion<br><span class="motion-type">(Human -> Anime Characters)</span></h2>
+        
+        <!-- First anime character video in single row -->
+        <div class="columns is-vcentered" style="margin-bottom: 2rem;">
+          <div class="column is-10 is-offset-1">
+            <video id="cross-croods" controls muted loop playsinline height="100%">
+              <source src="./static/videos/6_crosscroods.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Motion of Nonstandard Figures</p>
+          </div>
+        </div>
+        
+        <!-- Second anime character video in single row -->
+        <div class="columns is-vcentered" style="margin-bottom: 2rem;">
+          <div class="column is-10 is-offset-1">
+            <video id="cross-dance" controls muted loop playsinline height="100%">
+              <source src="./static/videos/8_crossdualdance.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 1rem; font-weight: 600;">Anime Characters' Interactions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <!-- Gallery -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Gallery for Diverse Characters</h2>
+        
+        <!-- Character videos with custom grid layout matching webpage_for_preview -->
+        <div class="character-grid-complex">
+          <!-- Left side: Two rows of horizontal videos (2/3 width) -->
+          <div class="horizontal-videos-container">
+            <!-- First Row (1-3) -->
+            <div class="horizontal-row">
+              <div class="character-video horizontal">
+                <div class="video-container">
+                  <video id="character1" controls muted loop playsinline>
+                    <source src="./static/videos/character1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="character-video horizontal">
+                <div class="video-container">
+                  <video id="character3" controls muted loop playsinline>
+                    <source src="./static/videos/character3.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+            <!-- Second Row (5-6) -->
+            <div class="horizontal-row">
+              <div class="character-video horizontal">
+                <div class="video-container">
+                  <video id="character5" controls muted loop playsinline>
+                    <source src="./static/videos/character5.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="character-video horizontal">
+                <div class="video-container">
+                  <video id="character6" controls muted loop playsinline>
+                    <source src="./static/videos/character6.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Right side: Single vertical video -->
+          <div class="vertical-videos-container">
+            <div class="character-video vertical">
+              <div class="video-container">
+                <video id="character8" controls muted loop playsinline>
+                  <source src="./static/videos/character8.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!--/ Animation. -->
+  </div>
+</section>
 
-
-    <!-- Concurrent Work. -->
+<section class="section" style="background-color: #f5f5f5; padding-top: 0; margin-top: 0;">
+  <div class="container is-max-desktop">
+    <!-- Special Characters -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+        <!-- Special characters in 1 row 2 columns layout -->
+        <div class="special-characters-container">
+          <div class="character-video horizontal">
+            <div class="video-container">
+              <video id="character2" controls muted loop playsinline>
+                <source src="./static/videos/character2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="character-video horizontal">
+            <div class="video-container">
+              <video id="characters7" controls muted loop playsinline>
+                <source src="./static/videos/characters7.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
 
   </div>
 </section>
@@ -447,7 +427,7 @@
     <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
+  journal   = {arxiv},
   year      = {2021},
 }</code></pre>
   </div>
