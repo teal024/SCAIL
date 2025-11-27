@@ -1,4 +1,4 @@
-# Nerfies
+# SCAIL
 
 This is the repository that contains source code for [SCAIL website](https://teal024.github.io/SCAIL/), forked from the [Nerfies website](https://nerfies.github.io).
 

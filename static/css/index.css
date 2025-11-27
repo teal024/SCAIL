@@ -293,7 +293,7 @@ h2.title.is-3 span.motion-type {
 /* Character grid complex layout - matching webpage_for_preview */
 .character-grid-complex {
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 2fr 1.4fr;
   gap: 25px;
   align-items: start;
 }
@@ -316,6 +316,13 @@ h2.title.is-3 span.motion-type {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
+}
+
+.vertical-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   height: 100%;
 }
 
@@ -393,6 +400,11 @@ h2.title.is-3 span.motion-type {
     gap: 12px;
   }
 
+  .vertical-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
   .character-video {
     padding: 12px;
   }
@@ -415,6 +427,11 @@ h2.title.is-3 span.motion-type {
   }
 
   .vertical-videos-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vertical-row {
     grid-template-columns: 1fr;
     gap: 10px;
   }
