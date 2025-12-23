@@ -498,3 +498,87 @@ h2.title.is-3 span.motion-type {
     gap: 15px;
   }
 }
+
+/* Anime video slider styles */
+.anime-video-slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.anime-video-item {
+  display: none;
+  width: 100%;
+}
+
+.anime-video-item.active {
+  display: block;
+}
+
+.anime-video-item video {
+  width: 100%;
+  height: auto;
+}
+
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-prev-btn {
+  left: -50px;
+}
+
+.slider-next-btn {
+  right: -50px;
+}
+
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dot.active {
+  background: #333;
+}
+
+.slider-dot:hover {
+  background: #666;
+}
+
+@media (max-width: 768px) {
+  .slider-prev-btn {
+    left: 10px;
+  }
+  
+  .slider-next-btn {
+    right: 10px;
+  }
+}

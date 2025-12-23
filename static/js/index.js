@@ -155,3 +155,52 @@ $(document).ready(function() {
     lazyLoadVideos();
 
 })
+
+// Anime video slider functionality
+let currentAnimeVideoIndex = 1; // Default to "Anime Characters' Interactions"
+
+function changeAnimeVideo(direction) {
+    const items = document.querySelectorAll('.anime-video-item');
+    const dots = document.querySelectorAll('.slider-dot');
+    const totalItems = items.length;
+    
+    // Pause current video
+    const currentVideo = items[currentAnimeVideoIndex].querySelector('video');
+    if (currentVideo) {
+        currentVideo.pause();
+    }
+    
+    // Update index
+    currentAnimeVideoIndex = (currentAnimeVideoIndex + direction + totalItems) % totalItems;
+    
+    // Update active states
+    items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentAnimeVideoIndex);
+    });
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentAnimeVideoIndex);
+    });
+}
+
+function setAnimeVideo(index) {
+    const items = document.querySelectorAll('.anime-video-item');
+    const dots = document.querySelectorAll('.slider-dot');
+    
+    // Pause current video
+    const currentVideo = items[currentAnimeVideoIndex].querySelector('video');
+    if (currentVideo) {
+        currentVideo.pause();
+    }
+    
+    currentAnimeVideoIndex = index;
+    
+    // Update active states
+    items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+    });
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
