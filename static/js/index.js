@@ -154,15 +154,49 @@ $(document).ready(function() {
     // Initialize lazy loading
     lazyLoadVideos();
 
+    // Initialize anime video slider
+    initAnimeVideoSlider();
+
 })
 
 // Anime video slider functionality
 let currentAnimeVideoIndex = 1; // Default to "Anime Characters' Interactions"
 
+function initAnimeVideoSlider() {
+    const prevBtn = document.getElementById('anime-slider-prev');
+    const nextBtn = document.getElementById('anime-slider-next');
+    const dots = document.querySelectorAll('.slider-dot');
+    
+    if (!prevBtn || !nextBtn) {
+        console.log('Anime slider buttons not found');
+        return;
+    }
+    
+    // Bind click events to navigation buttons
+    prevBtn.addEventListener('click', function() {
+        changeAnimeVideo(-1);
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        changeAnimeVideo(1);
+    });
+    
+    // Bind click events to indicator dots
+    dots.forEach(function(dot, index) {
+        dot.addEventListener('click', function() {
+            setAnimeVideo(index);
+        });
+    });
+    
+    console.log('Anime video slider initialized');
+}
+
 function changeAnimeVideo(direction) {
     const items = document.querySelectorAll('.anime-video-item');
     const dots = document.querySelectorAll('.slider-dot');
     const totalItems = items.length;
+    
+    if (totalItems === 0) return;
     
     // Pause current video
     const currentVideo = items[currentAnimeVideoIndex].querySelector('video');
@@ -186,6 +220,8 @@ function changeAnimeVideo(direction) {
 function setAnimeVideo(index) {
     const items = document.querySelectorAll('.anime-video-item');
     const dots = document.querySelectorAll('.slider-dot');
+    
+    if (items.length === 0) return;
     
     // Pause current video
     const currentVideo = items[currentAnimeVideoIndex].querySelector('video');

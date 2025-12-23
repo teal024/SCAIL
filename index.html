@@ -412,10 +412,10 @@
           <div class="column is-10 is-offset-1">
             <div class="anime-video-slider-container">
               <!-- Navigation buttons -->
-              <button class="slider-nav-btn slider-prev-btn" onclick="changeAnimeVideo(-1)">
+              <button class="slider-nav-btn slider-prev-btn" id="anime-slider-prev">
                 <i class="fas fa-chevron-left"></i>
               </button>
-              <button class="slider-nav-btn slider-next-btn" onclick="changeAnimeVideo(1)">
+              <button class="slider-nav-btn slider-next-btn" id="anime-slider-next">
                 <i class="fas fa-chevron-right"></i>
               </button>
               
@@ -436,8 +436,8 @@
               
               <!-- Indicators -->
               <div class="slider-indicators">
-                <span class="slider-dot" onclick="setAnimeVideo(0)"></span>
-                <span class="slider-dot active" onclick="setAnimeVideo(1)"></span>
+                <span class="slider-dot" data-index="0"></span>
+                <span class="slider-dot active" data-index="1"></span>
               </div>
             </div>
           </div>
